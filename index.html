@@ -1,0 +1,313 @@
+<html>
+    <head>
+        <title>Bucky</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="images/celero.png">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Red+Hat+Display" rel="stylesheet">
+        <link rel ="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/9210d8956f.js" crossorigin="anonymous"></script>
+        <script src="{% static 'home/js/jquery-2.1.3.min.js' %}"></script>
+        <script src="{% static 'home/js/cycle2.js' %}"></script>
+        <!--<script src="js/index.js"></script>-->
+        <script src="js/float-panel.js"></script>
+    </head>
+    <body>
+        <div id="navbar_hero_overlay_combined">
+            <div class="navbar_hero_overlay_combined_container">
+                <nav class="navbar sticky-top navbar-expand-md navbar-dark" style="background-color: transparent;">
+                    <a class="navbar-brand" href="#"><img src="images/bucky_logo.png" alt="bucky-logo" style="width: 40px;"> Bucky</a>
+                <button class="navbar-toggler" style="border: 1px solid #fff;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#ffffff; font-size:28px; float: right"></i></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="collapsibleNavbar">
+                    <div class="navbar-nav"></div>
+                        <div class="navbar-nav" style="margin-right: 15px">
+                            <a class="nav-item nav-link" href="#about-section" onMouseOver="this.style.color='rgb(0, 234, 117)'" onMouseOut="this.style.color='#fff'" style="color: #fff;">Shop</a>
+                            <a class="nav-item nav-link" href="#associated-companies-section" onMouseOver="this.style.color='rgb(0, 234, 117)'" onMouseOut="this.style.color='#fff'" style="color: #fff;">How it works</a>
+                            <a class="nav-item nav-link" href="#team's-capabilities-section" onMouseOver="this.style.color='rgb(0, 234, 117)'" onMouseOut="this.style.color='#fff'" style="color: #fff;">Credit score</a>
+                            <a class="nav-item nav-link" id="sign-in-link" href="#blogs_navbar_link" onMouseOver="this.style.color='rgb(0, 234, 117)'" onMouseOut="this.style.color='#fff'" style="color: #fff;">Sign in</a>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+            <div class="hero-text-section">
+                <div class="left-section">
+                    <h1 class="big-screen">Pay Later<br>Pay Bucky</h1>
+                    <h1 class="small-screen">Pay Later Pay Bucky</h1>
+                    <div class="hero-text">
+                        <p>Make your finances simple with Buckyy! Buy what you want, whenever you want, and pay later. Spend your money wisely. We have the best deals and the most transparent installment plans ever. Here’s your chance to pay smart. </p>
+                    </div>
+                    <div id="small-screen">
+                        <img src="images/hero_image.jpg">
+                    </div>
+                </div>
+                <div class="right-section" id="big-screen">
+                </div>
+                <div class="vertical-section">
+                    <p>Talk to us</p>
+                </div>
+            </div>
+        </div>
+        <textarea class="hero-textarea" rows="3" placeholder="SHOPPING&#10;What are you looking for?"></textarea><button><i class="fa fa-search fa-2x"></i></button>
+        <div class="slider">
+            <div class="btn-card-left" onClick="horizontalCardSliderLeft()"><i class="arrow-card left"></i></div>
+            <div class="slider-card" style="">
+                <div class="card-content">
+                    <p>Sale<br>Winter'22</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Popular<br>right now</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Trends</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Near you</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Sale<br>Winter'22</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Trends</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Near you</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Sale<br>Winter'22</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Trends</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Classic</p>
+                </div>
+            </div>
+            <div class="slider-card">
+                <div class="card-content">
+                    <p>Near you</p>
+                </div>
+            </div>
+            <div class="btn-card-right" onClick="horizontalCardSliderRight()"><i class="arrow-card right"></i></div>
+        </div>
+        <script src="js/index.js"></script>
+        <div class="process-section-overlay">
+            <div class="process-section">
+            <div class="process-section-left">
+                <p>How to buy with<br> Bucky</p>
+            </div>
+            <div class="controller" style="">
+                <button class="step-btn" id="step-btn-1" onclick="slide('step-1')"><p><span>-</span>Step 1</p></button>
+                <button class="step-btn" id="step-btn-2" onclick="slide('step-2')"><p><span>-</span>Step 2</p></button>
+                <button class="step-btn" id="step-btn-3" onclick="slide('step-3')"><p><span>-</span>Step 3</p></button>
+            </div>
+            <div class="process-section-right">
+                <div class="process-section-cards">
+                    <div class="process-section-card">
+                        <img src="images/head.png">
+                        <h2>Choose how to pay</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. Ut</p>
+                    </div>
+                    <div class="process-section-card">
+                        <img src="images/head.png">
+                        <h2>Choose how to pay</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. Ut</p>
+                    </div>
+                    <div class="process-section-card">
+                        <img src="images/head.png">
+                        <h2>Choose how to pay</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et doloremagna aliqua. Ut</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        <div class="reasons-section-overlay">
+        <h1>Why Buckyy?</h1>
+        <div class="reasons-section">
+            <div class="reason-1">
+                <img src="images/payment.png">
+                <h6>Pay in 30 days</h6>
+                <p>Enjoy what you’ve ordered right away. Pay for the products through Buckyy after trying them in real life.</p>
+            </div>
+            <div class="reason-2">
+                <img src="images/cart.png">
+                <h6>Pay in 4</h6>
+                <p>Split your payments into 4 equal installments, You just pay for the first installment and pay the rest every 2 weeks.</p>
+            </div>
+            <div class="reason-3">
+                <img src="images/credit.png">
+                <h6>No Interest, No Catch</h6>
+                <p>Interests? Don’t even worry about it. We got you. Pay off the credit with zero interest.</p>
+            </div>
+        </div>
+        </div>
+        
+        <div class="stats-section-overlay">
+            <div class="stats-section">
+                <div class="stats-1">
+                    <h1>9999</h1>
+                    <p>App installs</p>
+                </div>
+                <div class="stats-2">
+                    <h1>9999</h1>
+                    <p>Credit Transaction</p>
+                </div>
+                <div class="stats-3">
+                    <h1>9999</h1>
+                    <p>Credit Disbursed</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="credit-score-section-overlay">
+            <h1>Your Credit score at your hands</h1>
+        <h3>Activate your Buckyy Credit now</h3>
+        <div class="credit-score-section">
+            <span>+880</span>
+            <textarea></textarea>
+            <button><i class="arrow right"></i></button>
+        </div>
+        <p id="credit-score-para"><span>Refer</span> a friend and get 300 Bucky coins as your starting credit</p>
+        </div>
+        
+        <div class="working-mechanism-heading-and-para">
+            <h1>So, how does Buckyy work?</h1>
+            <p>There are two ways to use Buckyy. You can take Buckyy’s pay in 4 option to any store by shopping directly through our app and online platform, in-store and online. Or, simply go to the retailers we're currently partnered with and pay with Buckyy at checkout scanning the QR Code.</p>
+        </div>
+        
+        <div class="working-mechanism-section">
+            <div class="working-mechanism-1">
+                <img src="images/online-shopping-1.jpg">
+                <h6>Pay in 4 everywhere with Buckyy</h6>
+                <p>Download the Buckyy app or sign up  and get the freedom to pay in 4 with zero interest everywhere, in-store and online.</p>
+                <button>Get the app</button>
+            </div>
+            <div class="working-mechanism-2">
+                <img src="images/online-shopping-2.jpg">
+                <h6>Pay with Buckyy at your favorite retailers</h6>
+                <p>Discover hundreds of retailers with Klarna available at checkout. Head to our store directory to get started.</p>
+                <button>Buckyy stores</button>
+            </div>
+            <div class="working-mechanism-3">
+                <img src="images/online-shopping-3.jpg">
+                <h6>Unlock rewards</h6>
+                <p>Join our rewards club and get rewarded for your shopping.</p>
+                <button>Join our rewards club</button>
+            </div>
+        </div>
+        
+        <div class="sign-up-section">
+            <div class="sign-up-section-left">
+                <h1>Be with Buckyy</h1>
+                <p>Let us help you simplify your finances.</p>
+                <button>Sign Up</button>
+            </div>
+            <div class="sign-up-section-right">
+                <img src="images/bucky_logo.png">
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-section">
+                <div class="footer-section-1">
+                    <img src="images/bucky_logo.png">
+                    <h4>Contact us:</h4>
+                    <p>Phone: +88011 2222 3333</p>
+                    <p>Email: hello@buckyy.com</p>
+                    <p>Follow Bucky</p>
+                    <i class="fab fa-facebook fa-2x fa-inverse"></i>
+                    <i class="fa fa-twitter fa-2x fa-inverse"></i>
+                    <i class="fa fa-instagram fa-2x fa-inverse"></i>
+                    <p>Copyright 2021-2022 Buckyy Private Limited Company. All rights reserved.</p>
+                </div>
+                <div class="footer-section-2">
+                    <p>Home</p>
+                    <p>About us</p>
+                    <p>Careers</p>
+                    <p>Terms & privacy policy</p>
+                    <p>Legal</p>
+                    <p>Press</p>
+                </div>
+                <div class="footer-section-3">
+                    <p>Payment Method</p>
+                    <img src="images/american_express.png">
+                    <img src="images/visa.png">
+                    <img src="images/mastercard.png">
+                    <img src="images/paypal.png">
+                    <img src="images/apple_pay.png">
+                    <img src="images/google_pay.jpg">
+                    <div class="hotline-section">
+                        <div class="hotline-section-left">
+                            <img src="images/hotline.png">
+                        </div>
+                        <div class="hotline-section-right">
+                            <p>Hotline<br>162022</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section-4">
+                    <p>Help Center</p>
+                    <p>FAQ</p>
+                    <p>Powered by-<br><b>Bizstring Limited</b></p>
+                </div>
+            </div>
+        </footer>
+        
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
