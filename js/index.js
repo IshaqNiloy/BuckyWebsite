@@ -63,7 +63,7 @@ function horizontalCardSliderRight() {
             
 
 function horizontalCardSliderLeft() {
-    if(num==-1260){
+    if(num < -1670){
         
     }else{
         num -= divWidth;
