@@ -72,6 +72,100 @@ function horizontalCardSliderLeft() {
     console.log(num)
 }
 
+function isInViewPort(el) {
+    const rect = el.getBoundingClientRect();
+    
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 && 
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && 
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+var flag = 0;
+
+
+//------My Logic--------
+//Works fine but there is a lag when scrolled up
+
+/*function statsIncrementor() {
+    var i = 0;
+    const statsElem = document.getElementsByClassName("stats-section-overlay")[0];
+    const messageText = isInViewPort(statsElem);
+    console.log(messageText);
+    if (messageText == true && flag == 0) {
+        flag = 1;
+        const interval = setInterval(function(){
+            i ++;
+            document.getElementsByClassName("stats-1-h1")[0].innerHTML = i;
+            if (i==500) {
+                clearInterval(interval);
+            }
+        }, );
+        document.removeEventListener("scroll", statsIncrementor);
+    }
+}*/
+
+//-------Codepen Login-------
+
+function statsIncrementor() {
+    // number count for stats, using jQuery animate
+
+    $('.counting').each(function() {
+    var $this = $(this),
+        countTo = $this.attr('data-count');
+  
+    $({ countNum: $this.text()}).animate({
+        countNum: countTo
+    },
+
+    {
+
+        duration: 1000,
+        easing:'linear',
+        step: function() {
+        $this.text(Math.floor(this.countNum));
+        },
+        complete: function() {
+        $this.text(this.countNum);
+        //alert('finished');
+        }
+
+    });  
+});
+}
+
+document.addEventListener("scroll", statsIncrementor);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

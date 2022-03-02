@@ -7,6 +7,21 @@ h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Red Hat Display', sans-serif;*/
 }
 
+/*@media (min-width: 768px) and (max-width: 991px) {
+
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}*/
+
+
+
 .navbar {
     max-width: 1224px;
     margin: auto;
@@ -66,6 +81,17 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
+@media (max-width: 891px){
+    .navbar-nav > a {
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 892px){
+    .navbar-nav > a {
+    }
+}
+
 #sign-in-link {
     border: 1px solid #fff;
     border-radius: 50px;
@@ -114,6 +140,11 @@ h1, h2, h3, h4, h5, h6 {
         margin-top: -71px;
     }
 }
+
+.hero-text-section > .left-section {
+    padding: 25px;
+}
+
 
 @media (max-width: 920px) {
     .hero-text-section > .left-section {
@@ -989,6 +1020,7 @@ button:hover, button:focus, button:active {
 
 
 .working-mechanism-heading-and-para > h1 {
+    padding-bottom: 15px;
     font-weight: bold;
 }
 
@@ -1035,6 +1067,12 @@ button:hover, button:focus, button:active {
     padding: 25px;
 }
 
+@media (max-width: 768px) {
+    .working-mechanism-2, .working-mechanism-3 {
+        margin-top: 40px;
+    }
+}
+
 @media (max-width: 920px) {
     .working-mechanism-1, .working-mechanism-2, .working-mechanism-3 {
         width: 100%;
@@ -1066,6 +1104,12 @@ button:hover, button:focus, button:active {
     font-weight: bold;
 }
 
+@media (min-width: 369px) and (max-width: 768px) {
+    .working-mechanism-1 > p, .working-mechanism-2 > p, .working-mechanism-3 > p {
+        margin-bottom: 100px;
+    }
+}
+
 .sign-up-section {
     max-width: 1224px;
     display: flex;
@@ -1074,19 +1118,35 @@ button:hover, button:focus, button:active {
 
 @media (max-width: 920px) {
     .sign-up-section {
-        padding: 40px 0px 40px 0px;
+        padding: 40px 0px 80px 0px;
     }
 }
 
 @media (min-width: 921px) {
     .sign-up-section {
-        padding: 80px 0px 80px 0px;
+        padding: 80px 0px 160px 0px;
     }
 }
 
 
 .sign-up-section-left, .sign-up-section-right {
-    width: 50%;
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .sign-up-section-left {
+        min-width: 100%;
+    }
+    
+    .sign-up-section-right {
+        display: none;    
+    }
+}
+
+@media (min-width: 769px) {
+    .sign-up-section-left, .sign-up-section-right {
+        min-width: 50%;
+    }
 }
 
 .sign-up-section-left > h1 {
@@ -1106,11 +1166,12 @@ button:hover, button:focus, button:active {
 .sign-up-section-left > button {
     position: relative;
     bottom: 0;
-    background-color: #f4c404;
+    background-color: #28ccac;
     border-radius: 50px;
     border: 0px;
     font-family: 'Montserrat';
     font-size: 30px;
+    color: #fff;
     padding: 5px 45px 5px 45px;
 }
 
