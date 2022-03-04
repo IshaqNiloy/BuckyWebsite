@@ -19,7 +19,7 @@
         <div id="navbar_hero_overlay_combined">
             <div class="navbar_hero_overlay_combined_container">
                 <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background-color: transparent;">
-                    <a class="navbar-brand" href="#"><img src="images/buckyy_logo_cropped.png" alt="bucky-logo" style="width: 50px;"></a>
+                    <a class="navbar-brand" href="#"><img src="images/bucky_logo_white.png" alt="bucky-logo" style="width: 70px;"></a>
                 <button class="navbar-toggler" style="border: 1px solid #fff;" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:#ffffff; font-size:28px; float: right"></i></span>
                 </button>
@@ -43,10 +43,11 @@
                         <p>Make your finances simple with Buckyy! Buy what you want, whenever you want, and pay later. Spend your money wisely. We have the best deals and the most transparent installment plans ever. Here’s your chance to pay smart. </p>
                     </div>
                     <div id="small-screen">
-                        <img src="images/hero_image_bucky.jpg">
+                        <img src="images/bucky_logo_white_cropped.png">
                     </div>
                 </div>
                 <div class="right-section" id="big-screen">
+                    <img src="images/bucky_logo_white_cropped.png">
                 </div>
             </div>
         </div>
@@ -63,7 +64,7 @@
             </div>
         </div>
         <div class="slider">
-            <div class="btn-card-left" onClick="horizontalCardSliderLeft()"><i class="arrow-card left"></i></div>
+            <div class="btn-card-left" onClick="horizontalCardSliderRight()" onmouseover="zoomInBtn(this)" onmouseout="zoomOutBtn(this)"><i class="arrow-card left"></i></div>
             <div class="slider-card" style="">
                 <div class="card-content">
                     <p>Sale<br>Winter'22</p>
@@ -129,7 +130,7 @@
                     <p>Near you</p>
                 </div>
             </div>
-            <div class="btn-card-right" onClick="horizontalCardSliderRight()"><i class="arrow-card right"></i></div>
+            <div class="btn-card-right" onClick="horizontalCardSliderLeft()" onmouseover="zoomInBtn(this)" onmouseout="zoomOutBtn(this)"><i class="arrow-card right"></i></div>
         </div>
         <script src="js/index.js"></script>
         <div class="process-section-overlay">
@@ -207,8 +208,8 @@
         <h3>Activate your Buckyy Credit now</h3>
         <div class="credit-score-section">
             <span>+880</span>
-            <textarea></textarea>
-            <button><i class="arrow right"></i></button>
+            <button class="submit-btn"><i class="arrow right"></i></button>
+            <input type="number" max="99999999" value id="phone-number-input-bar">
         </div>
         <p id="credit-score-para"><span>Refer</span> a friend and get 300 Bucky coins as your starting credit</p>
         </div>
@@ -253,8 +254,7 @@
         <footer>
             <div class="footer-section">
                 <div class="footer-section-1">
-                    <img src="images/bucky_logo.png">
-                    <h4>Contact us:</h4>
+                    <img src="images/bucky_logo_white_cropped.png"><span class="footer-branding">&nbsp;Bucky</span>
                     <p>Phone: +88011 2222 3333</p>
                     <p>Email: hello@buckyy.com</p>
                     <p>Follow Bucky</p>
@@ -272,6 +272,22 @@
                     <p>Press</p>
                 </div>
                 <div class="footer-section-3">
+                    <p>Consumer</p>
+                    <p>Check eligibility</p>
+                    <p>How it works</p>
+                    <p>Financial Wellness</p>
+                    <p>Bucky publications</p>
+                    <p>Feedbacks</p>
+                </div>
+                <div class="footer-section-4">
+                    <p>Business</p>
+                    <p>Get started</p>
+                    <p>Become a partner</p>
+                    <p>Sell with Bucky</p>
+                    <p>Business log-in</p>
+                    <p>Business support</p>
+                </div>
+                <!--<div class="footer-section-3">
                     <p>Payment Method</p>
                     <img src="images/american_express.png">
                     <img src="images/visa.png">
@@ -279,20 +295,12 @@
                     <img src="images/paypal.png">
                     <img src="images/apple_pay.png">
                     <img src="images/google_pay.jpg">
-                    <div class="hotline-section">
-                        <div class="hotline-section-left">
-                            <img src="images/hotline.png">
-                        </div>
-                        <div class="hotline-section-right">
-                            <p>Hotline<br>162022</p>
-                        </div>
-                    </div>
                 </div>
                 <div class="footer-section-4">
                     <p>Help Center</p>
                     <p>FAQ</p>
                     <p>Powered by-<br><b>Bizstring Limited</b></p>
-                </div>
+                </div>-->
             </div>
         </footer>
         

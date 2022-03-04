@@ -50,10 +50,10 @@ function slide(step){
 var elem = document.getElementsByClassName("slider-card");
 var num=0;
 var divWidth = document.getElementsByClassName("slider-card")[0].clientWidth;
-
+document.getElementsByClassName("btn-card-left")[0].style.display = "none";
 
 function horizontalCardSliderRight() {
-    if(num==0) {  
+    if(num == 0) {
     } else {
         num += divWidth;
         console.log(elem[0].style.marginLeft);
@@ -63,8 +63,10 @@ function horizontalCardSliderRight() {
             
 
 function horizontalCardSliderLeft() {
+    if(num < 0) {
+       document.getElementsByClassName("btn-card-left")[0].style.display = "block"; 
+    }
     if(num < -1670){
-        
     }else{
         num -= divWidth;
         elem[0].style.marginLeft = num;   
@@ -83,13 +85,11 @@ function isInViewPort(el) {
     );
 }
 
-var flag = 0;
-
-
 //------My Logic--------
 //Works fine but there is a lag when scrolled up
 
-/*function statsIncrementor() {
+/*var flag = 0;
+function statsIncrementor() {
     var i = 0;
     const statsElem = document.getElementsByClassName("stats-section-overlay")[0];
     const messageText = isInViewPort(statsElem);

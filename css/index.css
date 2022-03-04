@@ -7,21 +7,6 @@ h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Red Hat Display', sans-serif;*/
 }
 
-/*@media (min-width: 768px) and (max-width: 991px) {
-
-    .navbar-collapse.collapse.in {
-        display: block !important;
-    }
-    .navbar-header .collapse, .navbar-toggle {
-        display:block !important;
-    }
-    .navbar-header {
-        float:none;
-    }
-}*/
-
-
-
 .navbar {
     max-width: 1224px;
     margin: auto;
@@ -44,20 +29,20 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #28ccac;
     z-index: 1;
 }
 
 @media (max-width: 920px) {
     #navbar_hero_overlay_combined {
-        background-color: #28ccac;
-        background-image: url(../images/hero_image_bucky.jpg);
+        /*background-image: url(../images/hero_image_bucky.jpg);*/
     }
 }
 
 @media (min-width: 921px) {
     #navbar_hero_overlay_combined {
         height: 75vh;
-        background-image: url(../images/hero_image_bucky.jpg);
+        /*background-image: url(../images/hero_image_bucky.jpg);*/
     }
 }
 
@@ -197,14 +182,26 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+#big-screen > img {
+    width: 240px;
+    height: 500px;
+    float: right;
+    padding-right: 25px; 
+}
+
+#small-screen > img {
+    width: 233px;
+    height: 500px;
+    float: right;
+    padding: 15px;
+}
+
 @media (max-width: 920px){
    #small-screen {
        display: block;
        padding: 0px;
     }
-    #small-screen img {
-        width: 100%;
-    }
+    
     #big-screen {
         display: none;
     }
@@ -446,7 +443,7 @@ label {
     transform: rotate(-90deg);
     cursor: pointer;
     padding: 0px 12px 0px 12px;
-    z-index: 1000;
+    z-index: 101;
 }
 
 @media (max-width: 920px) {
@@ -593,8 +590,9 @@ label {
     z-index: 10;
     border-radius: 50%;
     cursor: pointer;
-    transition: all .3s ease-in-out;
+    transition: all .5s ease-in-out;
     margin-left: 15px;
+    box-shadow: 0px 3px rgb(0, 0 , 0, 0.1);
 }
 
 @media (max-width: 920px) {
@@ -610,6 +608,7 @@ label {
 }
 
 .btn-card-right {
+    position: absolute;
     right: 0;
     margin-right: 15px;
     margin-left: 0px;
@@ -617,31 +616,29 @@ label {
 
 .btn-card-right > .arrow-card,
 .btn-card-left > .arrow-card {
-  border: solid #28ACCC;
-  border-width: 0 2px 2px 0;
-  display: inline-block;
-  padding: 5px;
-  transition: all .3s ease-in-out;
-}
-
-/*.btn-card-left:hover, .btn-card-right:hover {
-    background-color: #2596be;
-    padding: 20px;
-}
-
-.btn-card-left > .arrow-card:hover {
-    border: solid #000;
+    border: solid #28CCAC;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 10px;
+    padding: 5px;
+    transition: all .5s ease-in-out;
 }
 
-.btn-card-right > .arrow-card:hover {
-    border: solid #000;
+.btn-card-left:hover, .btn-card-right:hover {
+    background-color: #28CCAC;
+    padding: 12px;
+}
+
+.btn-card-left:hover > .arrow-card {
+    border: solid #fff;
     border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 10px;
-}*/
+}
+
+.btn-card-right:hover > .arrow-card {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+}
 
 .btn-card-left > .arrow-card {
     margin-left: 25%;
@@ -871,13 +868,15 @@ label {
 }
 
 .credit-score-section {
+    max-width: 600px;
     position: relative;
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .arrow {
-  border: solid #2596be;
+  border: solid #28ccac;
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 7px;
@@ -917,6 +916,10 @@ label {
     }
 }
 
+.submit-btn {
+    position: absolute;
+    right: ; 
+}
 
 .credit-score-section-overlay > h3 {
     text-align: center;
@@ -926,53 +929,91 @@ label {
 .credit-score-section > span {
     width: 100px;
     position: relative;
-    left: 70;
-    font-size: 25px;
+    left: 5;
+    font-size: 30px;
     font-weight: bold;
     text-align: center;
     background-color: #fff;
     box-shadow: 0px 3.5px 20px #909c9c;
     border: 1px;
-    border-radius: 20px;
+    border-radius: 9px;
     z-index: 1;
 }
 
-.credit-score-section > textarea {
-    font-size: 20px;
+@media (max-width: 768px) {
+    .credit-score-section > span {
+        width: 80px;
+        font-size: 25px;
+        padding: 10px 10px 0px 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .credit-score-section > span {
+        width: 100px;
+        font-size: 30px;
+        padding: 7px 10px 0px 10px;
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.credit-score-section > input {
+    width: 100%;       
+    height: 60px;
     font-weight: bold;
     box-shadow: 0px 3.5px 20px #909c9c;
     border: 1px;
     outline: none;
     resize: none;
-    padding-left: 80px;
+    padding-left: 15px; 
 }
 
-@media (max-width: 920px) {
-    .credit-score-section > textarea {
-        width: 100%;
-        max-width: 900px;
+@media (max-width: 768px) {
+    .credit-score-section > input {
+        font-size: 25px;
     }
 }
 
-@media (min-width: 921px) {
-    .credit-score-section > textarea {
-        width: 50%;
-        max-width: 600px;
+@media (min-width: 768px) {
+    .credit-score-section > input {
+       font-size: 30px;
     }
 }
-
 
 .credit-score-section > button {
     width: 100px;
-    position: relative;
-    left: -50;
-    background-color: #343434;
+    height: 60px;
+    position: absolute;
+    right: -3;
+    background-color: #40444c;
     z-index: 1;
-    border-radius: 50px;
+    border-radius: 9px;
     border: none;
     outline: none;
 }
 
+@media (max-width: 768px) {
+    .credit-score-section > button {
+        width: 80px;
+    }
+}
+
+@media (min-width: 768px) {
+    .credit-score-section > button {
+        width: 100px;
+    }
+}
 
 button:hover, button:focus, button:active {
     outline: none;
@@ -1173,6 +1214,7 @@ button:hover, button:focus, button:active {
     font-size: 30px;
     color: #fff;
     padding: 5px 45px 5px 45px;
+    margin-top: 15px;
 }
 
 footer {
@@ -1185,6 +1227,10 @@ footer {
     display: flex;
     flex-flow: wrap;
     margin: auto;
+}
+
+.footer-section p {
+    margin-bottom: 5px;
 }
 
 @media (max-width: 920px) {
@@ -1222,6 +1268,10 @@ footer {
     width: 70px;
 }
 
+.footer-branding {
+    font-size: 56px;
+}
+
 .footer-section-1 > i {
     padding: 5px;
 }
@@ -1245,10 +1295,6 @@ footer {
     padding: 10px 2px 10px 2px;
     border-radius: 10px;
     
-}
-
-.footer-section-4 > p:last-child {
-    margin-top: 100px;
 }
 
 .hotline-section {
