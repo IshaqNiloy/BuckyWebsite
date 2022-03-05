@@ -7,6 +7,26 @@ h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Red Hat Display', sans-serif;*/
 }
 
+.dual-navbar {
+    max-width: 1224px;
+    margin: auto;
+}
+
+.dual-navbar a {
+    padding: 30px 0px 25px 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 2.5px solid #fff
+}
+
 .navbar {
     max-width: 1224px;
     margin: auto;
@@ -746,13 +766,13 @@ label {
 
 @media (max-width: 920px) {
     .reasons-section-overlay {
-        padding: 70px 0px 40px 0px;
+        padding: 70px 0px 70px 0px;
     }
 }
 
 @media (min-width: 921px) {
     .reasons-section-overlay {
-        padding: 140px 0px 80px 0px;
+        padding: 140px 0px 140px 0px;
     }
 }
 
@@ -816,14 +836,14 @@ label {
 @media (max-width: 920px) {
     .stats-section-overlay {
         padding: 30px 0px 30px 0px;
-        margin: 30px 0px 30px 0px;
+        margin: 0px 0px 30px 0px;
     }
 }
 
 @media (min-width: 921px) {
     .stats-section-overlay {
         padding: 60px 0px 60px 0px;
-        margin: 60px 0px 60px 0px;
+        margin: 0px 0px 60px 0px;
     }
 }
 
@@ -1229,6 +1249,17 @@ footer {
     margin: auto;
 }
 
+.footer-section-left {
+    width: 40%;
+    display: flex;
+}
+
+.footer-section-right {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .footer-section p {
     margin-bottom: 5px;
 }
@@ -1260,12 +1291,64 @@ footer {
 @media (min-width: 769px) {
     .footer-section-1, .footer-section-2, 
     .footer-section-3, .footer-section-4 {
-        width: 25%;
+        
+    }
+}
+
+.copyright-small-screen-view {
+    margin-top: 15px;
+}
+
+.copy-sign {
+    font-size: 10px;
+    vertical-align: top;
+}
+@media (max-width: 768px) {
+    .footer-section-left, .footer-section-right {
+        width: 100%;
+    }
+    .payment-method-section {
+        width: 100%;
+    }
+    .footer-section-2, .footer-section-3,
+    .footer-section-4 {
+        width: 33.33%;
+    }
+    .copyright-small-screen-view {
+        display: block;
+    }
+    .copyright-big-screen-view {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .footer-section-left {
+        width: 40%;
+    }
+    
+    .footer-section-right {
+        width: 60%;
+    }
+    
+    .payment-method-section {
+        width: 100%;
+    }
+    .footer-section-2, .footer-section-3,
+    .footer-section-4 {
+        width: 33.33%;
+    }
+    .copyright-small-screen-view {
+        display: none;
+    }
+    .copyright-big-screen-view {
+        display: block;
     }
 }
 
 .footer-section-1 > img {
     width: 70px;
+    padding: 5px;
 }
 
 .footer-branding {
@@ -1284,14 +1367,17 @@ footer {
 
 @media (min-width: 921px) {
     .footer-section-1 > p:nth-child(9) {
-        white-space: nowrap;
         margin-top: 15px;
     }
 }
 
-.footer-section-3 > img {
-    width: 70px;
-    height: 60px;
+.payment-method-section {
+    padding: 15px;
+}
+
+.payment-method-section > img {
+    width: 90px;
+    height: 70px;
     padding: 10px 2px 10px 2px;
     border-radius: 10px;
     
