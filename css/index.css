@@ -589,6 +589,11 @@ label {
     }
 }
 
+.slider-card:hover {
+    cursor: pointer;
+    bottom: 5px;
+}
+
 .card-content {
     height: inherit;
     position: relative;
