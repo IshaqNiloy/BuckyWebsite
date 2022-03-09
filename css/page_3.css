@@ -294,7 +294,7 @@ a:hover {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
-    margin-bottom: 60px;
+    margin: 80px 0px 80px 0px;
 }
 
 .choice-section img {
@@ -338,6 +338,161 @@ ul li::before {
 .choice-section > .row > .col-sm-6 > ul {
     font-size: 26px;
     font-weight: 500;
+}
+
+.container-fluid {
+    background-color: #f4f3f2;
+}
+
+.how-to-section {
+    max-width: 1140px;
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.how-to-section h1 {
+    font-size: 60px;
+    text-align: center;
+    padding: 80px 0px 80px 0px;
+    font-weight: bold;
+}
+
+.buckky-name {
+    color: #28CCAC;
+}
+
+.how-to-section img {
+    width: 100%;
+}
+
+.how-to-section > .row > .col-sm-6 {
+    padding: 50px;
+}
+
+.step {
+    font-size: 30px;
+    color: #817a7a;
+    font-weight: bold;
+}
+
+.step-header {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.step-description {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.check-credit-score-section {
+    background-color: #d8ecec;
+    margin: 120px 0 40px;
+    border-radius: 25px;
+}
+
+.check-credit-score-para {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.btn-primary {
+    font-size: 25px;
+    color: #28CCAC;
+    font-weight: 700; 
+    background-color: #fff;
+    border: 0px;
+    padding: 20px 25px 20px;
+    border-radius: 10px;
+}
+
+.btn-primary:hover {
+    color: #fff; 
+    background-color: #28CCAC;
+}
+
+.row > .col-sm-7 {
+    padding: 50px;
+}
+
+.row > .col-sm-5 {
+    padding: 50px;
+}
+
+.col-sm-5 > img {
+    width: inherit;
+    height: inherit;
+}
+
+.sign-up-section {
+    max-width: 1224px;
+    display: flex;
+    margin: auto;
+}
+
+@media (max-width: 920px) {
+    .sign-up-section {
+        padding: 40px 0px 80px 0px;
+    }
+}
+
+@media (min-width: 921px) {
+    .sign-up-section {
+        padding: 80px 0px 120px 0px;
+    }
+}
+
+
+.sign-up-section-left, .sign-up-section-right {
+    padding: 25px;
+}
+
+@media (max-width: 768px) {
+    .sign-up-section-left {
+        min-width: 100%;
+    }
+    
+    .sign-up-section-right {
+        display: none;    
+    }
+}
+
+@media (min-width: 769px) {
+    .sign-up-section-left, .sign-up-section-right {
+        min-width: 50%;
+    }
+}
+
+.sign-up-section-left > h1 {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.sign-up-section-left > p {
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 3em;
+}
+
+.sign-up-section-right > img {
+    width: 40%;
+    float: right;
+}
+
+.sign-up-section-left > button {
+    position: relative;
+    bottom: 0;
+    background-color: #28ccac;
+    border-radius: 50px;
+    border: 0px;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    color: #fff;
+    padding: 5px 45px 5px 45px;
+    margin-top: 15px;
 }
 
 footer {

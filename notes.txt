@@ -1,1 +1,8 @@
 background-color: #28CCAC;
+
+
+# Page_3 - How to buy with Buckky - Section #
+background-color: #f4f3f2;
+
+#Page_3 - Check Credit Score - Section #
+background-color: #d8ecec;
