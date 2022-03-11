@@ -876,7 +876,7 @@ label {
     text-align: center;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 921px) {
     .stats-1 > h1, .stats-2 > h1, .stats-3 > h1 {
         font-size: 56px;
     }

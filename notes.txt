@@ -6,3 +6,13 @@ background-color: #f4f3f2;
 
 #Page_3 - Check Credit Score - Section #
 background-color: #d8ecec;
+
+#Media Query
+
+@media (max-width: 920px) {
+
+}
+
+@media (min-width: 921px) {
+
+}

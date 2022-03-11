@@ -290,11 +290,35 @@ a:hover {
     }  
 }
 
+@media (max-width: 920px) {
+    .choice-section {
+        padding-bottom: 40px;
+    }
+}
+
+@media (min-width: 921px) {
+    .choice-section {
+        padding-bottom: 80px;
+    }
+}
+
 .choice-section > h1 {
     text-align: center;
     font-size: 60px;
     font-weight: bold;
-    margin: 80px 0px 80px 0px;
+    padding: 80px 0px 80px 0px;
+}
+
+@media (max-width: 920px) {
+    .choice-section > h1 {
+        padding: 40px 0px 40px 0px;
+    }
+}
+
+@media (max-width: 921px) {
+   .choice-section > h1 {
+        font-size: 38px;
+    } 
 }
 
 .choice-section img {
@@ -303,11 +327,21 @@ a:hover {
 }
 
 .choice-section > .row > .col-sm-6:nth-child(1) {
-    padding-right: 35px;
+    padding: 15px 35px 15px 15px;
 }
 
 .choice-section > .row > .col-sm-6:nth-child(2) {
-    padding-left: 35px;
+    padding: 15px 15px 15px 35px;
+}
+
+@media (max-width: 575px) {
+    .choice-section > .row > .col-sm-6:nth-child(1) {
+        padding: 0px 25px 25px 25px;
+    }
+
+    .choice-section > .row > .col-sm-6:nth-child(2) {
+        padding: 25;
+    }
 }
 
 .choice-section > .row > .col-sm-6 > h2 {
@@ -316,10 +350,22 @@ a:hover {
     margin-bottom: 35px;
 }
 
+@media (max-width: 920px) {
+    .choice-section > .row > .col-sm-6 > h2 {
+        font-size: 23px;
+    }
+}
+
 .choice-section > .row > .col-sm-6 > p {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 35px;
+}
+
+@media (max-width: 920px) {
+    .choice-section > .row > .col-sm-6 > p {
+        font-size: 18px;
+    }
 }
 
 ul {
@@ -335,9 +381,21 @@ ul li::before {
   margin-left: -1em;
 }
 
+@media (max-width: 920px) {
+    ul li::before {
+        margin-left: -2em;
+    }
+}
+
 .choice-section > .row > .col-sm-6 > ul {
     font-size: 26px;
     font-weight: 500;
+}
+
+@media (max-width: 920px) {
+    .choice-section > .row > .col-sm-6 > ul {
+        font-size: 16px;
+    }
 }
 
 .container-fluid {
@@ -346,9 +404,19 @@ ul li::before {
 
 .how-to-section {
     max-width: 1140px;
-    margin-top: 80px;
+    margin-top: 40px;
+    margin-bottom: 80px;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 80px; 
+}
+
+@media (max-width: 920px) {
+    .how-to-section {
+        padding-top: 40px;
+        padding-bottom: 40px; 
+        margin-bottom: 40px;
+    }
 }
 
 .how-to-section h1 {
@@ -356,6 +424,13 @@ ul li::before {
     text-align: center;
     padding: 80px 0px 80px 0px;
     font-weight: bold;
+}
+
+@media (max-width: 920px) {
+    .how-to-section h1 {
+        font-size: 38px;
+        padding: 40px 0px 40px 0px;
+    }
 }
 
 .buckky-name {
@@ -370,15 +445,43 @@ ul li::before {
     padding: 50px;
 }
 
+@media (max-width: 920px) {
+    .how-to-section > .row > .col-sm-6 {
+        padding: 25px;
+    }
+    
+    #step-1 {
+        padding: 0px 25px 25px 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    #step-2 {
+        order: 2;
+    }
+}
+
 .step {
     font-size: 30px;
     color: #817a7a;
     font-weight: bold;
 }
 
+@media (max-width: 920px) {
+    .step {
+        font-size: 22px;
+    }
+}
+
 .step-header {
     font-size: 40px;
     font-weight: bold;
+}
+
+@media (max-width: 920px) {
+    .step-header {
+        font-size: 30px;
+    }
 }
 
 .step-description {
@@ -387,15 +490,37 @@ ul li::before {
     line-height: 1.5em;
 }
 
+@media (max-width: 920px) {
+    .step-description {
+        font-size: 18px;
+    }
+}
+
 .check-credit-score-section {
     background-color: #d8ecec;
-    margin: 120px 0 40px;
     border-radius: 25px;
+    padding-top: 60px;
+    padding-bottom: 60;
+    margin: 160px 0 80px;
+}
+
+@media (max-width: 920px) {
+    .check-credit-score-section {
+        padding-top: 0px;
+        padding-bottom: 30px;
+        margin: 80px 0 40px;
+    }
 }
 
 .check-credit-score-para {
     font-size: 50px;
     font-weight: 700;
+}
+
+@media (max-width: 920px) {
+    .check-credit-score-para {
+        font-size: 36px;
+    }
 }
 
 .btn-primary {
@@ -417,8 +542,20 @@ ul li::before {
     padding: 50px;
 }
 
+@media (max-width: 920px) {
+    .row > .col-sm-7 {
+        padding: 45px;
+    }
+}
+
 .row > .col-sm-5 {
     padding: 50px;
+}
+
+@media (max-width: 920px) {
+    .row > .col-sm-5 {
+        padding: 45px;
+    }
 }
 
 .col-sm-5 > img {
@@ -443,7 +580,6 @@ ul li::before {
         padding: 80px 0px 120px 0px;
     }
 }
-
 
 .sign-up-section-left, .sign-up-section-right {
     padding: 25px;
@@ -475,6 +611,13 @@ ul li::before {
     font-weight: 600;
     margin-top: 10px;
     line-height: 3em;
+}
+
+@media (max-width: 920px) {
+    .sign-up-section-left > p {
+        margin-top: 30px;
+        line-height: 1.5em;
+    }
 }
 
 .sign-up-section-right > img {
