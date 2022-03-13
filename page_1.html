@@ -11,9 +11,9 @@
         <script src="https://kit.fontawesome.com/9210d8956f.js" crossorigin="anonymous"></script>
         <!--<script src="js/jquery-2.1.3.min.js'"></script>
         <script src="{% static 'home/js/cycle2.js' %}"></script>
-        <script src="js/index.js"></script>
         <script src="js/float-panel.js"></script>-->
         <link rel ="stylesheet" href="css/page_1.css">
+        <script src="js/index.js"></script>
     </head>
     <body>
         <div id="navbar_hero_overlay_combined">
@@ -57,39 +57,19 @@
         
         <div class="container-fluid">
             <div class="how-to-section">
-                <h1>How to Buy with <span class="buckky-name">Buckky</span></h1>
                 <div class="row">
                     <div class="col-sm-6" id="step-1">
-                        <p class="step">Step 1</p>
+                        <p>How to Buy<br><b> with</b> <span class="buckky-name">Buckyy</span></p>
+                        <div class="steps-controller">
+                            <span class="step" tabindex="0" onClick="horizoltalSlider('step 1')">Step 1</span>
+                            <span class="step" tabindex="1" onClick="horizoltalSlider('step 2')">Step 2</span>
+                            <span class="step" tabindex="3" onClick="horizoltalSlider('step 3')">Step 3</span>
+                        </div>
                         <p class="step-header">Go shopping</p>
-                        <p class="step-description">Shop your favorite stores online or in-store
-                           and pay later with Buckyy. You’ll see us at
-                           checkout, or you can scan our QR code at
-                           in-store checkout.</p>
+                        <p class="step-description">Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.</p>
+                        <button type="button">Get Eligible</button><button class="learn-more-btn" type="button">Learn More</button>
                     </div>
-                    <div class="col-sm-6"><img src="images/affirm_app_screenshot.jpg"></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6" id="step-2"><img src="images/affirm_app_screenshot.jpg"></div>
-                    <div class="col-sm-6">
-                        <p class="step">Step 2</p>
-                        <p class="step-header">Choose your payment terms</p>
-                        <p class="step-description">You’re in control. Pick the payment option
-                           that works for you from our transparent
-                           payment options —from 4 interest-free
-                           payments every 2 weeks to paying the
-                           whole amount at once.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-6">
-                        <p class="step">Step 3</p>
-                        <p class="step-header">Make your payments</p>
-                        <p class="step-description">Manage your payments in your Buckyy
-                           account, and set up AutoPay so you don’t
-                           miss a payment.</p>
-                    </div>
-                    <div class="col-sm-6"><img src="images/affirm_app_screenshot.jpg"></div>
+                    <div class="col-sm-6"><img class="step-img" src="images/step_1.webp"></div>
                 </div>
             </div>
         </div>

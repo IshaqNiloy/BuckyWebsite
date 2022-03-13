@@ -421,17 +421,16 @@ label {
     }
 }
 
-.how-to-section h1 {
-    font-size: 60px;
-    text-align: center;
-    padding: 80px 0px 80px 0px;
+.how-to-section p:first-child {
+    font-size: 40px;
     font-weight: bold;
+    padding: 40px 0px 40px 0px;
 }
 
 @media (max-width: 920px) {
-    .how-to-section h1 {
-        font-size: 38px;
-        padding: 40px 0px 40px 0px;
+    .how-to-section p:first-child {
+        font-size: 35px;
+        padding: 20px 0px 20px 0px;
     }
 }
 
@@ -464,9 +463,16 @@ label {
 }
 
 .step {
-    font-size: 30px;
+    font-size: 24px;
     color: #817a7a;
-    font-weight: bold;
+    cursor: pointer;
+    margin: 0px 40px 0px 0px;
+}
+
+.step:focus {
+    font-weight: 500;
+    color: #000;
+    border-bottom: 2px solid #28CCAC;
 }
 
 @media (max-width: 920px) {
@@ -476,13 +482,14 @@ label {
 }
 
 .step-header {
-    font-size: 40px;
+    font-size: 35px;
     font-weight: bold;
+    margin: 20px 0px 20px 0px;
 }
 
 @media (max-width: 920px) {
     .step-header {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
@@ -575,17 +582,35 @@ label {
     float: right;
 }
 
-.sign-up-section-left > button {
+button {
     position: relative;
     bottom: 0;
     background-color: #28ccac;
     border-radius: 50px;
     border: 0px;
     font-family: 'Montserrat';
-    font-size: 30px;
+    font-size: 20px;
+    font-weight: 600;
     color: #fff;
-    padding: 5px 45px 5px 45px;
+    padding: 15px 25px 15px 25px;
     margin-top: 15px;
+}
+
+@media (max-width: 920px) {
+    button {
+        font-size: 16px;
+        padding: 15px 20px 15px 20px;
+    }
+    .learn-more-btn {
+        margin-left: 35px;
+    }
+}
+
+.learn-more-btn {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 45px;
 }
 
 footer {

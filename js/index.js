@@ -140,7 +140,27 @@ document.addEventListener("scroll", statsIncrementor);
 
 
 
+// page_1 slider
 
+
+
+
+function horizoltalSlider(stepNo) {
+    
+    var stepHeader = document.getElementsByClassName("step-header")[0];
+    var stepDescription = document.getElementsByClassName("step-description")[0];
+    var stepImage = document.getElementsByClassName("step-img")[0];
+    
+    const dict ={
+        "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "images/step_1.webp"],
+        "step 2": ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "images/step_2.webp"],
+        "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "images/step_3.webp"],
+    }
+    
+    stepHeader.innerHTML = dict[stepNo][0];
+    stepDescription.innerHTML = dict[stepNo][1];
+    stepImage.src = dict[stepNo][2];
+}
 
 
 
