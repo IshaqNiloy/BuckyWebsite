@@ -61,7 +61,7 @@
                     <div class="col-sm-6" id="step-1">
                         <p>How to Buy<br><b> with</b> <span class="buckky-name">Buckyy</span></p>
                         <div class="steps-controller">
-                            <span class="step" tabindex="0" onClick="horizoltalSlider('step 1')">Step 1</span>
+                            <span class="step step-active" id="1st-step" tabindex="0" onClick="horizoltalSlider('step 1')">Step 1</span>
                             <span class="step" tabindex="1" onClick="horizoltalSlider('step 2')">Step 2</span>
                             <span class="step" tabindex="3" onClick="horizoltalSlider('step 3')">Step 3</span>
                         </div>
@@ -70,6 +70,11 @@
                         <button type="button">Get Eligible</button><button class="learn-more-btn" type="button">Learn More</button>
                     </div>
                     <div class="col-sm-6"><img class="step-img" src="images/step_1.webp"></div>
+                </div>
+                <div class="circles">
+                    <div class="circle active-circle" id="1st-circle" onClick="horizoltalSlider('step 1')"></div>
+                    <div class="circle"onClick="horizoltalSlider('step 2')"></div>
+                    <div class="circle"onClick="horizoltalSlider('step 3')"></div>
                 </div>
             </div>
         </div>

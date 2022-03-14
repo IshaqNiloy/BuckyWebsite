@@ -410,7 +410,20 @@ label {
     margin-bottom: 80px;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 80px;
     padding-bottom: 80px; 
+}
+
+@media (max-width: 920px) {
+    .how-to-section > .row > .col-sm-6 {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 921px) {
+    .how-to-section > .row  .col-sm-6 {
+        width: 50%;
+    }
 }
 
 @media (max-width: 920px) {
@@ -424,13 +437,13 @@ label {
 .how-to-section p:first-child {
     font-size: 40px;
     font-weight: bold;
-    padding: 40px 0px 40px 0px;
+    padding: 0px 0px 40px 0px;
 }
 
 @media (max-width: 920px) {
     .how-to-section p:first-child {
         font-size: 35px;
-        padding: 20px 0px 20px 0px;
+        padding: 0px 0px 20px 0px;
     }
 }
 
@@ -442,12 +455,21 @@ label {
     width: 100%;
 }
 
-.how-to-section > .row > .col-sm-6 {
-    padding: 50px;
+.how-to-section > .row > .col-sm-6:nth-child(1) {
+    padding: 0px 50px 50px 50px;
+}
+
+.how-to-section > .row > .col-sm-6:nth-child(2) {
+    overflow-x: hidden;
+    padding: 0px 0px 0px 50px;
 }
 
 @media (max-width: 920px) {
-    .how-to-section > .row > .col-sm-6 {
+    .how-to-section > .row > .col-sm-6:nth-child(1) {
+        padding: 0px 25px 0px 0px;
+    }
+
+    .how-to-section > .row > .col-sm-6:nth-child(2) {
         padding: 25px;
     }
     
@@ -475,6 +497,12 @@ label {
     border-bottom: 2px solid #28CCAC;
 }
 
+.step-active {
+    font-weight: 500;
+    color: #000;
+    border-bottom: 2px solid #28CCAC;
+}
+
 @media (max-width: 920px) {
     .step {
         font-size: 22px;
@@ -494,6 +522,7 @@ label {
 }
 
 .step-description {
+    min-height: 150px;
     font-size: 22px;
     font-weight: 500;
     line-height: 1.5em;
@@ -501,7 +530,13 @@ label {
 
 @media (max-width: 920px) {
     .step-description {
-        font-size: 18px;
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 921px) {
+    .step-img {
+        min-width: 535px;
     }
 }
 
@@ -611,6 +646,37 @@ button {
     background-color: #fff;
     border: 1px solid #000;
     margin-left: 45px;
+}
+
+@media (min-width: 920px) and (max-width: 970px) {
+    .learn-more-btn {
+        margin-left: 15px !important;
+    }
+}
+
+
+.circles {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #28CCAC;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all 0.5s ease-in-out;
+}
+
+.active-circle {
+    opacity: 1;
+}
+
+.circles div:nth-child(2) {
+    margin: 0pc 10px 0px 10px;
 }
 
 footer {

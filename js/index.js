@@ -150,6 +150,7 @@ function horizoltalSlider(stepNo) {
     var stepHeader = document.getElementsByClassName("step-header")[0];
     var stepDescription = document.getElementsByClassName("step-description")[0];
     var stepImage = document.getElementsByClassName("step-img")[0];
+    var circles = document.getElementsByClassName("circle");
     
     const dict ={
         "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "images/step_1.webp"],
@@ -160,6 +161,30 @@ function horizoltalSlider(stepNo) {
     stepHeader.innerHTML = dict[stepNo][0];
     stepDescription.innerHTML = dict[stepNo][1];
     stepImage.src = dict[stepNo][2];
+    
+    if(stepNo != "step 1") {
+       document.getElementById("1st-step").classList.remove("step-active");
+    }
+    
+    if(stepNo == "step 1") {
+        circles[0].style.opacity = "1";
+        circles[1].style.opacity = "0.4";
+        circles[2].style.opacity = "0.4";
+    }
+    else if(stepNo == "step 2") {
+        circles[1].style.opacity = "1";
+        circles[0].style.opacity = "0.4";
+        circles[2].style.opacity = "0.4";
+    }
+    else {
+        circles[2].style.opacity = "1";
+        circles[0].style.opacity = "0.4";
+        circles[1].style.opacity = "0.4";
+    }
+    
+    if(stepNo != "step 1") {
+       document.getElementById("1st-circle").classList.remove("active-circle");
+    }
 }
 
 
