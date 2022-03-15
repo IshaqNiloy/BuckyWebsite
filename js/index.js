@@ -147,10 +147,13 @@ document.addEventListener("scroll", statsIncrementor);
 
 function horizoltalSlider(stepNo) {
     
+    var steps = document.getElementsByClassName("step");
     var stepHeader = document.getElementsByClassName("step-header")[0];
     var stepDescription = document.getElementsByClassName("step-description")[0];
     var stepImage = document.getElementsByClassName("step-img")[0];
     var circles = document.getElementsByClassName("circle");
+    var rightBtn = document.getElementsByClassName("btn-card-right")[0];
+    var leftBtn = document.getElementsByClassName("btn-card-left")[0];
     
     const dict ={
         "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "images/step_1.webp"],
@@ -167,19 +170,40 @@ function horizoltalSlider(stepNo) {
     }
     
     if(stepNo == "step 1") {
+        steps[0].classList.add("step-focus");
+        steps[1].classList.remove("step-focus");
+        steps[2].classList.remove("step-focus");
+        
         circles[0].style.opacity = "1";
         circles[1].style.opacity = "0.4";
         circles[2].style.opacity = "0.4";
+        
+        rightBtn.style.display = "block";
+        leftBtn.style.display = "none";
     }
     else if(stepNo == "step 2") {
+        steps[1].classList.add("step-focus");
+        steps[0].classList.remove("step-focus");
+        steps[2].classList.remove("step-focus");
+        
         circles[1].style.opacity = "1";
         circles[0].style.opacity = "0.4";
         circles[2].style.opacity = "0.4";
+        
+        rightBtn.style.display = "block";
+        leftBtn.style.display = "block";
     }
     else {
+        steps[2].classList.add("step-focus");
+        steps[0].classList.remove("step-focus");
+        steps[1].classList.remove("step-focus");
+        
         circles[2].style.opacity = "1";
         circles[0].style.opacity = "0.4";
         circles[1].style.opacity = "0.4";
+        
+        rightBtn.style.display = "none";
+        leftBtn.style.display = "block";
     }
     
     if(stepNo != "step 1") {

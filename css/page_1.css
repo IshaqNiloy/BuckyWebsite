@@ -352,18 +352,10 @@ a:hover {
     }
 }
 
-label {
-    color: #909293;
-    letter-spacing: 1.2;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 8px 0px 0px 40px;
-}
-
 .hero-input {
     width: 80%;
     position: absolute;
-    bottom: 10;
+    top: 30%;
     left: 5;
     background-color: transparent;
     border: 0;
@@ -371,20 +363,40 @@ label {
     padding-left: 35px;
 }
 
+::-webkit-input-placeholder { /* Edge */
+    font-size: 20px;
+    color: #909293;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+    font-size: 20px;
+    color: #909293;
+}
+
+::placeholder {
+    font-size: 20px;
+    color: #909293;
+}
+
 .search-btn {
     position: absolute;
-    top: 10;
-    right: 10;
-    width: 52;
-    height: 52;
-    background-color: #28ccac;
-    border: 0px;
-    border-radius: 50%;
+    top: 0;
+    right: 0;
+    background-color: #fff;
     z-index: 20;
 }
 
 .fa-search {
-    font-size: 19px;
+    position: relative;
+    right: -25;
+    color: #909293;
+    font-size: 29px;
+}
+
+@media (max-width: 920px) {
+    .fa-search {
+        right: 0;
+    }
 }
 
 @media (max-width: 920px) {
@@ -491,7 +503,7 @@ label {
     margin: 0px 40px 0px 0px;
 }
 
-.step:focus {
+.step-focus {
     font-weight: 500;
     color: #000;
     border-bottom: 2px solid #28CCAC;
@@ -538,6 +550,94 @@ label {
     .step-img {
         min-width: 535px;
     }
+}
+
+.btn-card-left, .btn-card-right {
+    position: absolute;
+    background-color: #fff;
+    padding: 13px;
+    z-index: 10;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    box-shadow: 0px 3px rgb(0, 0 , 0, 0.1);
+}
+
+@media (max-width: 920px) {
+    .btn-card-left, .btn-card-right{
+        /*top: 35%;*/
+    }
+}
+
+.btn-card-right{
+    top: 45%;
+}
+
+.btn-card-left {
+    display: none;
+    top: 44.8%;
+}
+
+@media (min-width: 1253px) {
+    .btn-card-left {
+        left: -20;
+    }
+}
+
+@media (max-width: 1252px) {
+    .btn-card-left {
+        left: 15;
+    }
+}
+
+.btn-card-right {
+    right: 0;
+    margin-right: 15px;
+    margin-left: 0px;
+} 
+
+.btn-card-right > .arrow-card,
+.btn-card-left > .arrow-card {
+    border: solid #28CCAC;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.btn-card-left:hover, .btn-card-right:hover {
+    background-color: #28CCAC;
+    padding: 12px;
+}
+
+.btn-card-left:hover > .arrow-card {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+}
+
+.btn-card-right:hover > .arrow-card {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+}
+
+.btn-card-left > .arrow-card {
+    margin-left: 25%;
+}
+
+.btn-card-right > .arrow-card {
+    margin-right: 25%;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 
 .btn-primary {
@@ -617,18 +717,26 @@ label {
     float: right;
 }
 
-button {
+ button {
     position: relative;
     bottom: 0;
-    background-color: #28ccac;
     border-radius: 50px;
     border: 0px;
     font-family: 'Montserrat';
+    font-size: 30px;
+    color: #fff;
+    padding: 5px 45px 5px 45px;
+}
+
+button:nth-child(5), button:nth-child(6) {
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
     padding: 15px 25px 15px 25px;
     margin-top: 15px;
+}
+
+button:nth-child(5) {
+    background-color: #28ccac;
 }
 
 @media (max-width: 920px) {
@@ -653,7 +761,6 @@ button {
         margin-left: 15px !important;
     }
 }
-
 
 .circles {
     display: flex;
