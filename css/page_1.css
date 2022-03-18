@@ -411,6 +411,84 @@ a:hover {
     }
 }
 
+.category-section {
+    padding-bottom: 80px;
+}
+
+@media (max-width: 920px) {
+    .category-section {
+        padding-bottom: 40px;
+    }
+}
+
+ul {
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: px;
+    cursor: pointer;
+}
+
+.col-sm-10 > h2 {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.col-sm-12 > h2 {
+    font-size: 60px;
+    font-weight: bold;
+    padding-top: 40px;
+}
+
+@media (max-width: 920px) {
+    .col-sm-10 > h2 {
+        font-size: 30px;
+    }
+    .col-sm-12 > h2 {
+        font-size: 30px;
+    }
+}
+
+.col-sm-10 > h1 {
+    font-size: 80px;
+    font-weight: bold;
+    padding-bottom: 40px; 
+    border-bottom: 1px solid #959393;
+}
+
+@media (max-width: 920px) {
+    .col-sm-10 > h1 {
+        font-size: 40px;
+    }
+}
+
+.col-md-4 {
+    padding: 15px; 
+}
+
+.col-md-4 img {
+    width: 100%;
+    max-height: 300px;
+    border-radius: 18px; 
+}
+
+.col-md-4 > p {
+    margin: 0px;
+    font-weight: 600;
+}
+
+.col-md-4 > p:nth-child(2) {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.store-name {
+    font-size: 20px;
+}
 
 .container-fluid {
     background-color: #f4f3f2;
@@ -418,7 +496,7 @@ a:hover {
 
 .how-to-section {
     max-width: 1140px;
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 80px;
     margin-left: auto;
     margin-right: auto;
@@ -441,7 +519,8 @@ a:hover {
 @media (max-width: 920px) {
     .how-to-section {
         padding-top: 40px;
-        padding-bottom: 40px; 
+        padding-bottom: 40px;
+        margin-top: 40px;
         margin-bottom: 40px;
     }
 }
@@ -713,7 +792,7 @@ a:hover {
 }
 
 .sign-up-section-right > img {
-    width: 40%;
+    width: 300px;
     float: right;
 }
 
@@ -739,6 +818,10 @@ button:nth-child(5) {
     background-color: #28ccac;
 }
 
+button:nth-child(5), .sign-up-btn {
+    background-color: #28ccac;
+}
+
 @media (max-width: 920px) {
     button {
         font-size: 16px;
@@ -747,6 +830,11 @@ button:nth-child(5) {
     .learn-more-btn {
         margin-left: 35px;
     }
+}
+
+.sign-up-btn {
+    font-size: 30px;
+    padding: 5px 45px 5px 45px;
 }
 
 .learn-more-btn {

@@ -143,7 +143,7 @@ document.addEventListener("scroll", statsIncrementor);
 // page_1 slider
 
 
-
+var previousSelection;
 
 function horizoltalSlider(stepNo) {
     
@@ -161,9 +161,23 @@ function horizoltalSlider(stepNo) {
         "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "images/step_3.webp"],
     }
     
-    stepHeader.innerHTML = dict[stepNo][0];
-    stepDescription.innerHTML = dict[stepNo][1];
-    stepImage.src = dict[stepNo][2];
+    if(previousSelection == 'step 2' && stepNo == 'step 2') {
+        stepHeader.innerHTML = dict['step 3'][0];
+        stepDescription.innerHTML = dict['step 3'][1];
+        stepImage.src = dict['step 3'][2];
+        
+    }
+    else if(previousSelection == 'step 2' && stepNo == 'step 1') {
+        stepHeader.innerHTML = dict['step 2'][0];
+        stepDescription.innerHTML = dict['step 2'][1];
+        stepImage.src = dict['step 2'][2];  
+    }
+    else {
+        stepHeader.innerHTML = dict[stepNo][0];
+        stepDescription.innerHTML = dict[stepNo][1];
+        stepImage.src = dict[stepNo][2];   
+    }
+    
     
     if(stepNo != "step 1") {
        document.getElementById("1st-step").classList.remove("step-active");
@@ -190,8 +204,20 @@ function horizoltalSlider(stepNo) {
         circles[0].style.opacity = "0.4";
         circles[2].style.opacity = "0.4";
         
-        rightBtn.style.display = "block";
-        leftBtn.style.display = "block";
+        //if step 3 is on the screen then the right arrow button will disappear
+        
+        if(previousSelection == 'step 2' && stepNo == 'step 2') {
+           rightBtn.style.display = "none";
+           leftBtn.style.display = "block";
+        }
+        //if step 2 is on the screen then both the arrow buttons will appear
+ 
+        else {
+           rightBtn.style.display = "block";
+           leftBtn.style.display = "block";
+        }
+        
+        //end
     }
     else {
         steps[2].classList.add("step-focus");
@@ -207,8 +233,21 @@ function horizoltalSlider(stepNo) {
     }
     
     if(stepNo != "step 1") {
-       document.getElementById("1st-circle").classList.remove("active-circle");
+        document.getElementById("1st-circle").classList.remove("active-circle");
     }
+    
+    if (previousSelection == 'step 2') {
+        steps[2].classList.add("step-focus");
+        steps[0].classList.remove("step-focus");
+        steps[1].classList.remove("step-focus");
+        
+        circles[2].style.opacity = "1";
+        circles[0].style.opacity = "0.4";
+        circles[1].style.opacity = "0.4"; 
+    }
+    console.log(previousSelection)
+    previousSelection = stepNo;
+    
 }
 
 
