@@ -494,6 +494,11 @@ li {
     font-size: 20px;
 }
 
+.icons img { 
+    width: 20px;
+    
+}
+
 .container-fluid {
     background-color: #f4f3f2;
 }
@@ -587,12 +592,6 @@ li {
 }
 
 .step-focus {
-    font-weight: 500;
-    color: #000;
-    border-bottom: 2px solid #28CCAC;
-}
-
-.step-active {
     font-weight: 500;
     color: #000;
     border-bottom: 2px solid #28CCAC;

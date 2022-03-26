@@ -161,29 +161,11 @@ function horizoltalSlider(stepNo) {
         "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "images/step_3.webp"],
     }
     
-    if(previousSelection == 'step 2' && stepNo == 'step 2') {
-        stepHeader.innerHTML = dict['step 3'][0];
-        stepDescription.innerHTML = dict['step 3'][1];
-        stepImage.src = dict['step 3'][2];
+    if(stepNo == 'step 1') {
+        stepHeader.innerHTML = dict['step 1'][0];
+        stepDescription.innerHTML = dict['step 1'][1];
+        stepImage.src = dict['step 1'][2];
         
-    }
-    else if(previousSelection == 'step 2' && stepNo == 'step 1') {
-        stepHeader.innerHTML = dict['step 2'][0];
-        stepDescription.innerHTML = dict['step 2'][1];
-        stepImage.src = dict['step 2'][2];  
-    }
-    else {
-        stepHeader.innerHTML = dict[stepNo][0];
-        stepDescription.innerHTML = dict[stepNo][1];
-        stepImage.src = dict[stepNo][2];   
-    }
-    
-    
-    if(stepNo != "step 1") {
-       document.getElementById("1st-step").classList.remove("step-active");
-    }
-    
-    if(stepNo == "step 1") {
         steps[0].classList.add("step-focus");
         steps[1].classList.remove("step-focus");
         steps[2].classList.remove("step-focus");
@@ -194,8 +176,13 @@ function horizoltalSlider(stepNo) {
         
         rightBtn.style.display = "block";
         leftBtn.style.display = "none";
+        
     }
-    else if(stepNo == "step 2") {
+    else if(stepNo == 'step 2') {
+        stepHeader.innerHTML = dict['step 2'][0];
+        stepDescription.innerHTML = dict['step 2'][1];
+        stepImage.src = dict['step 2'][2];
+        
         steps[1].classList.add("step-focus");
         steps[0].classList.remove("step-focus");
         steps[2].classList.remove("step-focus");
@@ -220,6 +207,10 @@ function horizoltalSlider(stepNo) {
         //end
     }
     else {
+        stepHeader.innerHTML = dict[stepNo][0];
+        stepDescription.innerHTML = dict[stepNo][1];
+        stepImage.src = dict[stepNo][2]; 
+        
         steps[2].classList.add("step-focus");
         steps[0].classList.remove("step-focus");
         steps[1].classList.remove("step-focus");
@@ -235,19 +226,115 @@ function horizoltalSlider(stepNo) {
     if(stepNo != "step 1") {
         document.getElementById("1st-circle").classList.remove("active-circle");
     }
+}
+
+var previousDictKey = null;
+var flag = 0;
+
+function sliderUsingArrow(dictKey) {
+    var steps = document.getElementsByClassName("step");
+    var stepHeader = document.getElementsByClassName("step-header")[0];
+    var stepDescription = document.getElementsByClassName("step-description")[0];
+    var stepImage = document.getElementsByClassName("step-img")[0];
+    var circles = document.getElementsByClassName("circle");
+    var rightBtn = document.getElementsByClassName("btn-card-right")[0];
+    var leftBtn = document.getElementsByClassName("btn-card-left")[0];
     
-    if (previousSelection == 'step 2') {
+    const dict ={
+        "step 1": ["Go shopping", "Shop your favorite stores online or in-store and pay later with Buckyy. You’ll see us at checkout, or you can scan our QR code at in-store checkout.", "images/step_1.webp"],
+        "step 2": ["Choose your payment terms", "You’re in control. Pick the payment option that works for you from our transparent payment options —from 4 interest-free payments every 2 weeks to paying the whole amount at once.", "images/step_2.webp"],
+        "step 3": ["Make your payments", "Manage your payments in your Buckyy account, and set up AutoPay so you don’t miss a payment.", "images/step_3.webp"],
+    }
+    
+    console.log(dictKey);
+    console.log(previousDictKey);
+    
+    if(dictKey == 'step 2' && previousDictKey == null || dictKey == 'step 2' && previousDictKey == 'step 1') {
+        stepHeader.innerHTML = dict['step 2'][0];
+        stepDescription.innerHTML = dict['step 2'][1];
+        stepImage.src = dict['step 2'][2];
+        
+        steps[1].classList.add("step-focus");
+        steps[0].classList.remove("step-focus");
+        steps[2].classList.remove("step-focus");
+        
+        circles[1].style.opacity = "1";
+        circles[0].style.opacity = "0.4";
+        circles[2].style.opacity = "0.4";
+        
+        rightBtn.style.display = "block";
+        leftBtn.style.display = "block";
+        
+        flag = 0;
+        
+    }
+    else if(dictKey == 'step 2' && previousDictKey == 'step 2') {
+        stepHeader.innerHTML = dict['step 3'][0];
+        stepDescription.innerHTML = dict['step 3'][1];
+        stepImage.src = dict['step 3'][2];
+        
         steps[2].classList.add("step-focus");
         steps[0].classList.remove("step-focus");
         steps[1].classList.remove("step-focus");
         
         circles[2].style.opacity = "1";
         circles[0].style.opacity = "0.4";
-        circles[1].style.opacity = "0.4"; 
+        circles[1].style.opacity = "0.4";
+        
+        //Shows only right button
+        rightBtn.style.display = "none";
+        leftBtn.style.display = "block";
+        //end
+        
+        flag = 1;
+        
     }
-    console.log(previousSelection)
-    previousSelection = stepNo;
+    else if(dictKey == 'step 1' && previousDictKey == 'step 2' && flag == 0 || dictKey == 'step 1' && previousDictKey == 'step 1' && flag == 0) {
+        stepHeader.innerHTML = dict['step 1'][0];
+        stepDescription.innerHTML = dict['step 1'][1];
+        stepImage.src = dict['step 1'][2];
+        
+        steps[0].classList.add("step-focus");
+        steps[1].classList.remove("step-focus");
+        steps[2].classList.remove("step-focus");
+        
+        circles[0].style.opacity = "1";
+        circles[1].style.opacity = "0.4";
+        circles[2].style.opacity = "0.4";
+        
+        //Show only right button
+        rightBtn.style.display = "block";
+        leftBtn.style.display = "none";
+        //end
+        console.log("hello");
+        
+    }
     
+    else if(dictKey == 'step 1' && previousDictKey == 'step 2' && this.flag == 1) {
+        stepHeader.innerHTML = dict['step 2'][0];
+        stepDescription.innerHTML = dict['step 2'][1];
+        stepImage.src = dict['step 2'][2];
+        
+        steps[1].classList.add("step-focus");
+        steps[0].classList.remove("step-focus");
+        steps[2].classList.remove("step-focus");
+        
+        circles[1].style.opacity = "1";
+        circles[0].style.opacity = "0.4";
+        circles[2].style.opacity = "0.4";
+        
+        //Shows both the arrow buttons
+        
+        rightBtn.style.display = "block";
+        leftBtn.style.display = "block";
+        //end
+        
+        flag = 0;
+        
+    }
+    console.log(flag);
+    previousDictKey = dictKey;
+
 }
 
 
