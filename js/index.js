@@ -138,6 +138,40 @@ function statsIncrementor() {
 
 document.addEventListener("scroll", statsIncrementor);
 
+//category changer function
+
+var previousCategory;
+
+function categoryChanger(category){
+    var currentCategory;
+    
+    if(previousSelection == undefined) {
+        previousSelection = 0;
+    }
+    
+    //Checks weather it is a one digit or two digit number
+    if(category[category.length-2] == " ") {
+        currentCategory = category.slice(category.length-1);
+    }
+    else {
+        currentCategory = category.slice(category.length-2);
+    }
+    //end
+    
+    const categoryArr = document.getElementsByClassName("category");
+    const categoryHeaderArr = document.getElementsByClassName("category-header");
+    
+    categoryHeaderArr[0].innerHTML = category.slice(0, category.length-2);
+    categoryHeaderArr[1].innerHTML = category.slice(0, category.length-2);
+    categoryArr[previousSelection].classList.remove("active-li");
+    categoryArr[currentCategory].classList.add("active-li");
+    
+    //Removes the styling for the previous item
+    previousSelection = currentCategory;
+    //end
+}
+//end
+
 
 
 // page_1 slider

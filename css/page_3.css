@@ -112,6 +112,12 @@ a:hover {
     padding: 2px;
 }
 
+.vl {
+    display: inline;
+    border-left: 2px solid #fff;
+    height: 50px;
+}
+
 .hero-text-section {
     display: flex;
     max-width: 1224px;

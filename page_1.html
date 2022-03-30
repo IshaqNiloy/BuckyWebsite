@@ -55,35 +55,46 @@
         </div>
         
         <div class="container category-section">
-            <div class="row">
+            <div class="row category-big-screen">
                 <div class="col-sm-3"></div>
-                <div class="col-sm-9">               <h1>All</h1>
+                <div class="col-sm-9"><h1 class="category-header">All</h1>
                 </div>
             </div>
                 <div class="row">
                     <div class="col-sm-3">
                         <p>Categories</p>
                         <ul>
-                            <li>All</li>
-                            <li>Accessories</li>
-                            <li>Apparel</li>
-                            <li>Auto</li>
-                            <li>Health & Beauty</li>
-                            <li>Books</li>
-                            <li>Home & Furniture</li>
-                            <li>Tech</li>
-                            <li>Shoes</li>
-                            <li>Food</li>
-                            <li>Gifts</li>
-                            <li>Household</li>
-                            <li>Luggage & Bags</li>
-                            <li>Office</li>
-                            <li>Sporting Goods </li>
-                            <li>Travel</li>
+                            <li class="category active-li" onClick="categoryChanger('All 0')">All <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Accessories 1')">Accessories  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Apparel 2')">Apparel  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Auto 3')">Auto <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Health & Beauty 4')">Health & Beauty  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Books 5')">Books  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Home & Furniture 6')">Home & Furniture  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Tech 7')">Tech  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Shoes 8')">Shoes  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Food 9')">Food  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Gifts 10')">Gifts  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Household 11')">Household  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Luggage & Bags 12')">Luggage & Bags  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Office 13')">Office  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Sporting Goods 14')">Sporting Goods  <span class="category-section-vl">&nbsp;|&nbsp;</span></li>
+                            <li class="category" onClick="categoryChanger('Travel 15')">Travel</li>
                         </ul>
                     </div>
                     <div class="col-sm-9">
-                        <h2>Deals</h2>
+                        <div class="row category-small-screen">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-9"><h1 class="category-header">All</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h2>Deals</h2>
+                            </div>
+                            <div class="col-sm-6"><button class="filter-btn">Filters <img src="images/filter.png"></button>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-md-4 col-sm-4">
                                 <img src="images/wedding.webp">
@@ -115,8 +126,11 @@
                                 <p>Aarong</p>
                                 <p><span  class="icons"><img src="images/tag.png"></span> As low as 0% APR</p>
                             </div>
-                            <div class="col-sm-12">
+                            <div class="col-sm-8">
                                 <h2>Featured Stores</h2>
+                            </div>
+                            <div class="col-sm-4">
+                                <button class="filter-btn">Filters <img src="images/filter.png"></button>
                             </div>
                             <div class="col-md-4 col-sm-4">
                                 <img src="images/wedding.webp">
