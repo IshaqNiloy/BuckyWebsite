@@ -584,11 +584,19 @@ li {
     }
 }
 
+.steps-controller {
+    overflow: hidden;
+}
 .step {
     font-size: 24px;
     color: #817a7a;
     cursor: pointer;
     margin: 0px 40px 0px 0px;
+    white-space: nowrap;
+}
+
+.step:last-child {
+    margin: 0px;
 }
 
 .step-focus {
@@ -648,6 +656,7 @@ li {
 @media (max-width: 920px) {
     .btn-card-left, .btn-card-right{
         /*top: 35%;*/
+        display: none !important;
     }
 }
 
@@ -825,6 +834,13 @@ button:nth-child(5), .sign-up-btn {
     background-color: #28ccac;
 }
 
+.learn-more-btn {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+    margin-left: 45px;
+}
+
 @media (max-width: 920px) {
     button {
         font-size: 16px;
@@ -835,16 +851,16 @@ button:nth-child(5), .sign-up-btn {
     }
 }
 
+@media (max-width: 415px) {
+    .learn-more-btn {
+        display: block;
+        margin-left: 0px;
+    }
+}
+
 .sign-up-btn {
     font-size: 30px;
     padding: 5px 45px 5px 45px;
-}
-
-.learn-more-btn {
-    color: #000;
-    background-color: #fff;
-    border: 1px solid #000;
-    margin-left: 45px;
 }
 
 @media (min-width: 920px) and (max-width: 970px) {
