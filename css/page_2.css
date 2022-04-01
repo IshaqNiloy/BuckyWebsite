@@ -262,7 +262,7 @@ a:hover {
 }
 
 .hero-text > p {
-    padding: 15px;
+    padding-bottom: 15px;
     padding-right: 25px !important;
 }
 
@@ -281,7 +281,7 @@ a:hover {
 .hero-text-section > .left-section > h1 {
     font-weight: bold;
     font-size: 32px;
-    padding: 15px;
+    padding-bottom: 15px;
 }
 
 @media (min-width: 775px) and (max-width: 957px) {
@@ -299,6 +299,84 @@ a:hover {
 .buckky-name {
     color: #28CCAC;
 }
+
+.why-activate-section h2 {
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.why-activate-section p {
+    font-size: 25px;
+}
+
+.why-activate-section .col-sm-5 {
+    padding: 15px !important;
+}
+
+.ball-1, .ball-2, .ball-3 {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3d4a6e;
+    border-radius: 50%;
+}
+
+.ball-1 {
+    right: 0;   
+}
+
+.ball-2 {
+    top: 20;
+    right: 0;  
+}
+
+.ball-3 {
+    top: 3;
+    right: 0;   
+}
+
+.connecting-line-1, .connecting-line-2 {
+    position: relative;
+    width: 420px;
+    height: 5px;
+    background-color: #3d4a6e;
+} 
+
+.connecting-line-1 {
+    top: 200;
+    left: 270;
+    transform: rotate(48deg);
+}
+
+.connecting-line-2 {
+    top: 500;
+    left: 270;
+    transform: rotate(-48deg);
+}
+
+@media (max-width: 1199px) {
+    .connecting-line-1 {
+        width: 410px;
+        top: 205;
+        left: 201;
+        transform: rotate(52.8deg);
+    }
+
+    .connecting-line-2 {
+        width: 450px;
+        top: 540;
+        left: 180;
+        transform: rotate(-58deg);
+    }
+}
+
+@media (max-width: 575px) {
+    .connecting-line-1, .connecting-line-2,
+    .ball-1, .ball-2, .ball-3{
+        display: none;
+    }
+}
+
 
 .credit-score-section-overlay {
     position: relative;
