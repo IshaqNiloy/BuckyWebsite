@@ -7,6 +7,15 @@ h1, h2, h3, h4, h5, h6 {
     /*font-family: 'Red Hat Display', sans-serif;*/
 }
 
+.container-fluid {
+    padding: 0;
+    overflow: hidden;
+}
+
+.container-fluid .col-sm-12 {
+    padding: 80px 0px 80px 0px;
+}
+
 .dual-navbar {
     max-width: 1224px;
     margin: auto;
@@ -377,6 +386,94 @@ a:hover {
     }
 }
 
+.need-more-info-section {
+    color: #fff;
+    background-color: #28CCAC;
+}
+
+.need-more-info-section  h2:nth-child(1) {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.need-more-info-section  h2:nth-child(4) {
+    font-size: 46px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.need-more-info-section  h3 {
+    font-size: 36px;
+    margin-bottom: 80px;
+}
+
+.need-more-info-buttons {
+    margin-bottom: 80px;
+}
+
+.need-more-info-buttons button {
+    width: 253px;
+    color: #fff;
+    background-color: #40444c;
+}
+
+.need-more-info-buttons button:nth-child(2) {
+    margin-left: 40px;
+}
+
+.company-name {
+    color: #28CCAC;
+}
+
+.accordion {
+    max-width: 790px;
+    margin: auto;
+}
+
+.card {
+    border: 0px;
+    border-bottom: 1px solid #fff;
+}
+
+.card-body{
+    background-color: #28CCAC;
+    border-bottom: 1px solid #fff;
+}
+
+.card-header {
+    background-color: #28CCAC;
+}
+
+.card-header button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.card-header button:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.card-header button {
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+.card-header button .arrow {
+    
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 5px;
+    float: right;
+}   
+
+.card-header button .right {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
 
 .credit-score-section-overlay {
     position: relative;
@@ -556,7 +653,6 @@ button:hover, button:focus, button:active {
 }
 
 .check-credit-score-section {
-    background-color: #d8ecec;
     border-radius: 25px;
     padding-top: 60px;
     padding-bottom: 60;
@@ -571,12 +667,52 @@ button:hover, button:focus, button:active {
     }
 }
 
+.check-credit-score-section  img {
+    background-color: #40444c;
+    border-radius: 30px;
+    padding: 50px;
+}
+
+.check-credit-score-button-section {
+    position: relative;
+    bottom: -52;
+}
+
+.check-credit-score-section button {
+    background-color: #40444c;
+    color: #fff;
+}
+
+.check-credit-score-section button:nth-child(2) {
+    margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .check-credit-score-section button:nth-child(2) {
+        margin-left: 30px;
+    }
+}
+
+.check-credit-score-section button:hover {
+    background-color: #40444c;
+}
+
+@media (max-width: 768px) {
+    .check-credit-score-section > .row > .col-sm-7 {
+        min-width: 100% !important;
+    }
+    
+    .check-credit-score-section > .row > .col-sm-5 {
+        min-width: 100% !important;
+    }
+}
+
 .check-credit-score-para {
     font-size: 50px;
     font-weight: 700;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 991px) {
     .check-credit-score-para {
         font-size: 36px;
     }
@@ -608,9 +744,11 @@ button:hover, button:focus, button:active {
     border-radius: 10px;
 }
 
-.btn-primary:hover {
-    color: #fff; 
-    background-color: #28CCAC;
+@media (max-width: 991px) {
+    .btn-primary {
+        font-size: 18px;
+        padding: 15px 17px 15px;
+    }
 }
 
 .row > .col-sm-7 {
@@ -696,21 +834,10 @@ button:hover, button:focus, button:active {
 }
 
 .sign-up-section-right > img {
+    background-color: #40444c;
     width: 300px;
     float: right;
-}
-
-.sign-up-section-left > button {
-    position: relative;
-    bottom: 0;
-    background-color: #28ccac;
-    border-radius: 50px;
-    border: 0px;
-    font-family: 'Montserrat';
-    font-size: 30px;
-    color: #fff;
-    padding: 5px 45px 5px 45px;
-    margin-top: 15px;
+    border-radius: 30px;
 }
 
 footer {

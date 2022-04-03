@@ -518,12 +518,22 @@ ul li::before {
     }
 }
 
+@media (max-width: 768px) {
+    .check-credit-score-section > .row > .col-sm-7 {
+        min-width: 100% !important;
+    }
+    
+    .check-credit-score-section > .row > .col-sm-5 {
+        min-width: 100% !important;
+    }
+}
+
 .check-credit-score-para {
     font-size: 50px;
     font-weight: 700;
 }
 
-@media (max-width: 920px) {
+@media (max-width: 991px) {
     .check-credit-score-para {
         font-size: 36px;
     }
@@ -629,6 +639,7 @@ ul li::before {
 .sign-up-section-right > img {
     width: 300px;
     float: right;
+    border-radius: 30px;
 }
 
 .sign-up-section-left > button {
