@@ -354,6 +354,38 @@ function sliderUsingArrow(direction) {
 
 }
 
+//Collapsable Section's Arrow Position
+
+var previousBtn = 0;
+var flag = 0;
+
+function arrowRotation(btnNo) {
+    const btnArr = document.getElementsByClassName("arrow");
+    
+    if(previousBtn == undefined) {
+        previousBtn = btnArr[btnNo[btnNo.length - 1]];
+    }
+    
+    if(previousBtn == btnArr[btnNo[btnNo.length - 1]]) {
+        if(flag == 0) {
+            btnArr[btnNo[btnNo.length - 1]].style.transform = "rotate(45deg)";
+            flag = 1;
+        }
+        else {
+            btnArr[btnNo[btnNo.length - 1]].style.transform = "rotate(-45deg)";
+            flag = 0;
+        }
+    }
+    else {
+        previousBtn.style.transform = "rotate(45deg)";
+        btnArr[btnNo[btnNo.length - 1]].style.transform = "rotate(-45deg)";
+        flag = 0;
+    }
+    
+    previousBtn = btnArr[btnNo[btnNo.length - 1]];
+    
+}
+
 
 
 

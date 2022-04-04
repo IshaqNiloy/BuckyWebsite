@@ -437,28 +437,26 @@ a:hover {
 
 .card-body{
     background-color: #28CCAC;
-    border-bottom: 1px solid #fff;
 }
 
 .card-header {
     background-color: #28CCAC;
+    border-bottom: 0px;
 }
 
+
 .card-header button {
-    text-decoration: none;
     color: #fff;
     font-size: 18px;
     font-weight: 600;
 }
 
 .card-header button:hover {
-    text-decoration: none;
     color: #fff;
 }
 
 .card-header button {
     box-shadow: none !important;
-    text-decoration: none;
 }
 
 .card-header button .arrow {
@@ -477,6 +475,10 @@ a:hover {
 
 .credit-score-section-overlay {
     position: relative;
+}
+
+.btn-link {
+    text-decoration: none !important;
 }
 
 /*@media (max-width: 920px) {
