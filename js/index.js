@@ -356,7 +356,7 @@ function sliderUsingArrow(direction) {
 
 //Collapsable Section's Arrow Position
 
-var previousBtn = 0;
+var previousBtn;
 var flag = 0;
 
 function arrowRotation(btnNo) {
@@ -366,7 +366,9 @@ function arrowRotation(btnNo) {
         previousBtn = btnArr[btnNo[btnNo.length - 1]];
     }
     
+    //When the same button is clicked repeatedly
     if(previousBtn == btnArr[btnNo[btnNo.length - 1]]) {
+        //flag is used to toggle between arrow positions
         if(flag == 0) {
             btnArr[btnNo[btnNo.length - 1]].style.transform = "rotate(45deg)";
             flag = 1;
@@ -376,12 +378,13 @@ function arrowRotation(btnNo) {
             flag = 0;
         }
     }
+    //When different buttons are clicked
     else {
         previousBtn.style.transform = "rotate(45deg)";
         btnArr[btnNo[btnNo.length - 1]].style.transform = "rotate(-45deg)";
         flag = 0;
     }
-    
+    //To change the position of the pervious arrow
     previousBtn = btnArr[btnNo[btnNo.length - 1]];
     
 }
