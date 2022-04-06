@@ -389,7 +389,14 @@ function arrowRotation(btnNo) {
     
 }
 
+//Close log in 
 
+function closeLogIn() {
+    var overlayElement = document.getElementsByClassName('log-in-section')[0];
+    var videoElement = document.getElementById('video');
+    overlayElement.style.display = 'none';
+    videoElement.pause();
+}
 
 
 

@@ -756,14 +756,13 @@ button:hover, button:focus, button:active {
 
 .check-credit-score-section {
     border-radius: 25px;
-    padding-top: 30px;
     padding-bottom: 30px;
 }
 
 @media (max-width: 920px) {
     .check-credit-score-section {
         padding-top: 0px;
-        padding-bottom: 0px;
+        padding-bottom: 40px;
     }
 }
 
@@ -867,7 +866,7 @@ button:hover, button:focus, button:active {
 
 @media (max-width: 920px) {
     .row > .col-sm-5 {
-        padding: 60px 45px;
+        padding: 80px 45px 0px 45px;
     }
 }
 
