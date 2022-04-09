@@ -308,9 +308,9 @@
                 </div>
             </div>
         </footer>
-        <div class="log-in-section">
-            <button class="log-in-close-btn" onClick="closeLogIn()"><i class="far fa-times-circle"></i></button>
-            <div class="log-in">
+        <div class="sign-in-popup">
+            <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
+            <div class="pop-up">
                 <img src="images/account.png">
                 <h3>Sign in</h3>
                 <p>Sign in to your account with your phone number</p>
@@ -318,13 +318,47 @@
                 <input type="password" placeholder="Password">
                 <p>Forgotten password?</p>
                 <button type="submit">Continue</button>
-                <p>Don't have an account? Create one.</p>
+                <a onClick="openCreateAccountPopup()">Don't have an account? Create one.</a>
                 <p>By continuing, I agree to Buckyy’s <span id="terms-of-service">Terms of Service</span> and authorize Buckyy to obtain, use, and share consumer reports about me.</p>
             </div>
         </div>
+        
+        <div class="create-account-popup">
+            <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
+            <div class="pop-up">
+                <img src="images/account.png">
+                <h3>Create your account</h3>
+                <p>Tell us a bit about yourself. We just need the basics.</p>
+                <input type="number" placeholder="Phone number">
+                <button type="submit" onClick="showOtpPopup()">Continue</button>
+                <p>We’ll send you a verification code via SMS.</p>
+                <p>By continuing, I agree to Buckyy’s <span id="terms-of-service">Terms of Service</span> and authorize Buckyy to obtain, use, and share consumer reports about me.</p>
+            </div>
+        </div>
+        
+        <div class="otp-popup">
+            <button class="close-btn" onClick="closePopup()"><i class="far fa-times-circle"></i></button>
+            <div class="pop-up">
+                <img src="images/account.png">
+                <h3>OTP</h3>
+                <p>An OTP has been sent to your phone number</p>
+                <div class="otp-input">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                    <input type="number">
+                </div>
+                <button type="submit">Confirm</button>
+                <p>Didn’t receive the code?</p>
+                <a>Resend OTP</a>
+            </div>
+        </div>
+        
         <script>
           setTimeout( function () {
-            var overlayElement = document.getElementsByClassName('log-in-section');
+            var overlayElement = document.getElementsByClassName('sign-in-popup');
             overlayElement[0].style.display = 'flex';
           }, 3000);
         </script>

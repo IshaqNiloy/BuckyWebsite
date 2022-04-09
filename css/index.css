@@ -1388,9 +1388,9 @@ footer {
     
 }
 
-/* Recent Post Section */
+/* Log in pop up */
 
-.log-in-section {
+.sign-in-popup, .create-account-popup, .otp-popup {
     position: fixed;
     top: 0;
     width: 100vw;
@@ -1403,7 +1403,7 @@ footer {
     
 }
 
-.log-in-close-btn {
+.close-btn {
     position: absolute;
     right: 30px;
     top: 10px;
@@ -1414,7 +1414,7 @@ footer {
     border: none;
 }
 
-.log-in {
+.pop-up {
     max-width: 500px; 
     background-color: #fff;
     padding: 35px;
@@ -1422,25 +1422,25 @@ footer {
     box-shadow: 0px 0px 5px #000;
 }
 
-.log-in img {
+.pop-up img {
     width: 60px;
     margin-bottom: 15px;
 }
 
-.log-in h3 {
+.pop-up h3 {
     color: #353535;
     font-size: 36px;
     font-family: sans-serif;
     font-weight: bold;
 }
 
-.log-in p {
+.pop-up p {
     font-family: sans-serif;
     color: #353535;
     font-size: 18px;
 }
 
-.log-in p:nth-child(6) {
+.pop-up p:nth-child(6) {
     font-family: 'Montserrat';
     color: #28CCAC;
     font-weight: 700;
@@ -1448,7 +1448,7 @@ footer {
     margin-bottom: 25px;
 }
 
-.log-in button {
+.pop-up button {
     width: 100%;
     padding: 15px;
     font-family: 'Montserrat';
@@ -1460,22 +1460,24 @@ footer {
     margin-bottom: 25px;
 }
 
-.log-in p:nth-child(8) {
+.pop-up a {
     font-family: 'Montserrat';
-    color: #28CCAC;
+    color: #28CCAC !important;
+    font-size: 18px;
     font-weight: 700;
-    margin-bottom: 25px;
+    cursor: pointer;
 }
 
-.log-in p:nth-child(9) {
+.pop-up p:nth-child(9) {
     font-size: 14px;
+    margin-top: 25px;
 }
 
 #terms-of-service {
     color: #28CCAC;
 }
 
-.log-in input {
+.pop-up input {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
@@ -1516,12 +1518,46 @@ footer {
 
 
 
+/*Create account popup*/
 
 
+.create-account-popup {
+    display: none;
+}
 
 
+.create-account-popup > .pop-up > input {
+    margin-bottom: 25px;
+}
 
 
+/*end*/
+
+/*OTP popup*/
+
+.otp-popup {
+    display: none;
+}
+
+.otp-popup > .pop-up input {
+    width: 15%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #a0adad;
+    margin-top: 25px;
+}
+
+.otp-input {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.otp-popup .pop-up p:nth-child(6) {
+    color: #000;
+}
+
+/*end*/
 
 
 
