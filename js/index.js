@@ -414,11 +414,37 @@ function showOtpPopup() {
     document.getElementsByClassName("otp-popup")[0].style.display = "flex";
 }
 
+//end
 
 
 
+// ekyc next page
 
+var key = 1;
 
+function showNextPage(move) {
+    const dict = {
+        1: ["Let’s start by getting to know you better", "Name", "Enter your Name"],
+        2: ["", "Email", "Enter your Email"],
+        3: ["", "Address", "Enter your address"],
+        4: ["", "Date of Birth", "00-00-1972"]
+    };
+    
+    if(key == undefined) {
+        key = 2;
+    }
+    
+    if (move == 'next') {
+        key += 1;
+    }
+    else{
+        key -= 1;
+    } 
+    
+    document.getElementById("text").innerHTML = dict[key][0];
+    document.getElementById("lable").innerHTML = dict[key][1];
+    document.getElementById("ekyc-input").placeholder = dict[key][2];
+}
 
 
 
