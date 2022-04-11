@@ -422,28 +422,53 @@ function showOtpPopup() {
 
 var key = 1;
 
-function showNextPage(move) {
+function showEkycPage(move) {
+    var j = 0;
     const dict = {
-        1: ["Let’s start by getting to know you better", "Name", "Enter your Name"],
-        2: ["", "Email", "Enter your Email"],
-        3: ["", "Address", "Enter your address"],
-        4: ["", "Date of Birth", "00-00-1972"]
+        1: ["Let’s start by getting to know you better", "Name", "Enter your Name", "", "", "", "", ""],
+        2: ["", "Email", "Enter your Email", "", "", "", "", ""],
+        3: ["", "Address", "Enter your address", "", "", "", "", ""],
+        4: ["", "Date of Birth", "00-00-1972", "", "", "", "", ""],
+        5: ["", "Gender", "", "images/male.png", "images/female.png", "images/others.png", "", ""],
+        6: ["", "Profession", "", "images/working_profession.png", "images/business.png", "images/student.png", "images/self_employed.png", "images/retired.png"],
+        7: ["", "Gender", "", "images/male.png", "images/female.png", "images/others.png", "", ""],
     };
     
     if(key == undefined) {
-        key = 2;
+        key = 1;
     }
     
-    if (move == 'next') {
+    if (move == 'next' && key < Object.keys(dict).length) {
         key += 1;
     }
-    else{
+    else if(move == 'previous' && key > 1) {
         key -= 1;
     } 
     
-    document.getElementById("text").innerHTML = dict[key][0];
-    document.getElementById("lable").innerHTML = dict[key][1];
-    document.getElementById("ekyc-input").placeholder = dict[key][2];
+    if(key <= Object.keys(dict).length){
+        document.getElementById("text").innerHTML = dict[key][0];
+        document.getElementById("lable").innerHTML = dict[key][1];
+        
+        if(dict[key][2] != "") {
+            document.getElementById("ekyc-input").style.display = "block"; 
+            document.getElementById("ekyc-input").placeholder = dict[key][2];
+            document.getElementsByClassName("img-div")[0].style.display = "none";
+        }
+        else {
+            for(var i=3; i < dict[key].length; i++) {
+                if(dict[key][i] != "") {
+                    document.getElementsByClassName("img")[j].src = dict[key][i];
+                    document.getElementsByClassName("img-sub-div")[j].style.display = "block";
+                }
+                else {
+                    document.getElementsByClassName("img-sub-div")[j].style.display = "none";
+                }
+                j++;
+            }
+            document.getElementsByClassName("img-div")[0].style.display = "flex";
+            document.getElementById("ekyc-input").style.display = "none";
+        }
+    }
 }
 
 

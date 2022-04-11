@@ -11,15 +11,35 @@
     </head>
     <body>
         <div class="ekyc-section">
-            <button onClick="showNextPage('previous')" id="previous-btn">&larr;</button>
-            <div class="row">
-                <div class="col-sm-12">
-                    <h2 id="text">Let’s start by getting to know you better</h2>
-                    <h1 id="lable">Name</h1>
-                    <input id="ekyc-input" placeholder="Enter your Name">
+            <div class="ekyc-container">
+                <button onClick="showEkycPage('previous')" id="previous-btn"><img src="images/left_arrow.png"></button>
+                <h2 id="text">Let’s start by getting to know you better</h2>
+                <h1 id="lable">Name</h1>
+                <input id="ekyc-input" placeholder="Enter your Name">
+                <div class="img-div">
+                    <div class="img-sub-div">
+                        <img src="" class="img" alt="icon">
+                        <p>Male</p>
+                    </div>
+                    <div class="img-sub-div">
+                        <img src="" class="img" alt="icon">
+                        <p>Female</p>
+                    </div>
+                    <div class="img-sub-div">
+                        <img src="" class="img" alt="icon">
+                        <p>Others</p>
+                    </div>
+                    <div class="img-sub-div">
+                        <img src="" class="img" alt="icon">
+                        <p>Others</p>
+                    </div>
+                    <div class="img-sub-div">
+                        <img src="" class="img" alt="icon">
+                        <p>Others</p>
+                    </div>
                 </div>
+                <button onClick="showEkycPage('next')" id="next-btn">Next</button>
             </div>
-            <button onClick="showNextPage('next')">Next</button>
         </div>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

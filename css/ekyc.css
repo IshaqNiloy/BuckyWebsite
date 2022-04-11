@@ -1,26 +1,20 @@
-.row {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.ekyc-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 501px) {
-    .row {
-        min-width: 500px;
+    .ekyc-container{
+        min-width: 1200px;
     }
 }
 
 @media (max-width: 500px) {
-    .row {
+    .ekyc-container {
         width: 100%;
     }
-}
-
-.col-sm-12 {
-    margin: 0;
-    padding: 0;
 }
 
 .ekyc-section {
@@ -74,33 +68,45 @@ input {
 }
 
 
-button {
+#next-btn, #previous-btn {
     position: absolute;
-    bottom: 50;
-    right: 50;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    background-color: #28CCAC;
     border: 0;
-    border-radius: 8px;
-    padding: 10px 65px 10px 65px;
     cursor: pointer;
     outline: none;
 }
 
-
-#previous-btn {
-    position: relative;
-    top: 0;
-    left: 0;
-    float: left;
-    font-size: 40px;
-    color: #28CCAC;
-    background-color: #fff;
-    padding: 0px;
+#next-btn {
+    bottom: 50;
+    right: 100;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    background-color: #28CCAC;
+    border-radius: 8px;
+    padding: 10px 65px 10px 65px;
 }
 
+
+#previous-btn {
+    top: 50;
+    left: 50;
+    font-size: 40px;
+    background-color: #fff;
+}
+
+.img-div {
+    display: none;
+    justify-content: space-between;
+}
+
+.img-div div {
+    color: #28CCAC;
+    font-weight: bold;
+    font-size: 36px;
+    border: 3px solid #f4f3f2;
+    padding: 25px;
+    border-radius: 10px;
+}
 
 
 
