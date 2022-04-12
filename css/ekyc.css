@@ -44,27 +44,27 @@ input {
     border-bottom: 4px solid #28CCAC;
     padding: 15px;
     outline: none;
+    color: #28CCAC;
+    font-size: 26px;
+    text-align: center;
 }
 
 ::-webkit-input-placeholder { /* Edge */
     color: #d8ecec;
     font-size: 46px;
     font-weight: bold;
-    text-align: center;
 }
 
 :-ms-input-placeholder { /* Internet Explorer */
     color: #d8ecec;
     font-size: 46px;
     font-weight: bold;
-    text-align: center;
 }
 
 ::placeholder {
     color: #d8ecec;
     font-size: 46px;
     font-weight: bold;
-    text-align: center;
 }
 
 
@@ -108,9 +108,16 @@ input {
     border-radius: 10px;
 }
 
+#income-div p {
+    font-family: sans-serif;
+    color:  #c4c4c4;
+    font-size: 24px;
+    border-bottom: 1px solid #28CCAC;
+}
 
-
-
+#income-div p:last-child {
+    border-bottom: 0px;
+}
 
 
 
