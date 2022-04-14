@@ -524,7 +524,36 @@ function showEkycPage(move) {
 }
 
 
+var gender = "";
+var profession = "";
+var sourceOfFund = "";
 
+
+function set(imgValue){
+    if (gender == undefined) {
+        gender = "";
+        profession = "";
+        sourceOfFund = "";
+    }
+    
+    var currentLabel = document.getElementById("lable").innerHTML;
+
+    if(currentLabel == "Gender"){
+        gender = document.getElementById("img-1").alt;
+        document.getElementById("ekyc-input").value = "";
+        console.log(gender);
+    }
+    else if (currentLabel == "Profession"){
+        profession = imgValue
+        document.getElementById("ekyc-input").value = "";
+        console.log(profession);
+    }
+    else if (currentLabel == "Source of Fund"){
+        sourceOfFund =imgValue
+        document.getElementById("ekyc-input").value = "";
+        console.log(sourceOfFund);
+    }
+}
 
 
 
